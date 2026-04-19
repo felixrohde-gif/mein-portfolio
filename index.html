@@ -1773,6 +1773,83 @@ body.menu-open {
   text-align: center;
 }
 
+/* ---- Sales Excellence (reuses mentoring-* shell) ---- */
+.mentoring-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mentoring-card--sales {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.mentoring-card--sales .mentoring-card-icon {
+  margin: 0 0 var(--space-sm);
+}
+
+.mentoring-card--sales .mentoring-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.mentoring-card--sales .mentoring-card-text {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.mentoring-card-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 4px;
+}
+
+.mentoring-card-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-sm) 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.mentoring-card-list li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--color-dark);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.mentoring-card-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, var(--color-primary) 0 3.5px, transparent 4px),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.18), rgba(var(--color-primary-rgb), 0.06));
+  border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+}
+
+@media (max-width: 1024px) {
+  .mentoring-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ========================================
        PHILOSOPHY SECTION
        ======================================== */
@@ -3215,6 +3292,48 @@ body.menu-open .whatsapp-float { opacity: 0; pointer-events: none; transition: o
       </div>
     </section>
 
+    <!-- Sales Excellence Section -->
+    <section class="section" id="sales-excellence" aria-labelledby="sales-title">
+      <div class="container">
+        <div class="mentoring-header reveal">
+          <span class="about-eyebrow" data-i18n="sales.eyebrow">Sales Excellence</span>
+          <h2 id="sales-title" data-i18n="sales.title">Zwei Dimensionen. Ein Ergebnis.</h2>
+          <p class="about-text" data-i18n="sales.subtitle">Als Analyst baue ich das System, als Architekt denke ich den Menschen mit. Deshalb biete ich beides: persönliches Coaching und skalierbare Vertriebsarchitektur.</p>
+        </div>
+        <div class="mentoring-grid mentoring-grid-2">
+          <article class="mentoring-card mentoring-card--sales reveal reveal-delay-1">
+            <div class="mentoring-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+            </div>
+            <span class="mentoring-card-tag" data-i18n="sales.coaching.tag">Sales Coaching</span>
+            <h3 class="mentoring-card-title" data-i18n="sales.coaching.title">Mindset &amp; Accountability</h3>
+            <p class="mentoring-card-text" data-i18n="sales.coaching.text">Persönliches Mentoring, das mentale Blockaden löst und verbindliches Handeln etabliert. Wir kommen ins Tun – mit Klarheit, Vertrauen und einer Haltung, die verkauft.</p>
+            <ul class="mentoring-card-list">
+              <li data-i18n="sales.coaching.bullet1">1:1 Sparring &amp; Accountability-Rhythmus</li>
+              <li data-i18n="sales.coaching.bullet2">Mindset-Arbeit: Einfach loslegen im Vertrieb</li>
+              <li data-i18n="sales.coaching.bullet3">Kundenvertrauen &amp; souveräne Gesprächsführung</li>
+            </ul>
+          </article>
+          <article class="mentoring-card mentoring-card--sales reveal reveal-delay-2">
+            <div class="mentoring-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+            </div>
+            <span class="mentoring-card-tag" data-i18n="sales.consulting.tag">Sales Consulting</span>
+            <h3 class="mentoring-card-title" data-i18n="sales.consulting.title">Funnel- &amp; Prozessarchitektur</h3>
+            <p class="mentoring-card-text" data-i18n="sales.consulting.text">Vertrieb als System gedacht: skalierbare Funnels, saubere CRM-Architektur und intelligente Automatisierung. Damit jedes Gespräch einen Platz hat – und jede Entscheidung datenbasiert fällt.</p>
+            <ul class="mentoring-card-list">
+              <li data-i18n="sales.consulting.bullet1">Funnel-Design &amp; KPI-basierte Messbarkeit</li>
+              <li data-i18n="sales.consulting.bullet2">CRM-Setup, Lead-Routing &amp; Pipeline-Hygiene</li>
+              <li data-i18n="sales.consulting.bullet3">Automatisierung &amp; AI-Workflows (DSGVO-konform)</li>
+            </ul>
+          </article>
+        </div>
+        <div class="mentoring-cta reveal">
+          <a href="#calendar" class="btn btn-primary btn-lg" data-i18n="sales.cta">Strategiegespräch vereinbaren</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Mentoring Section -->
     <section class="section" id="mentoring" aria-labelledby="mentoring-title">
       <div class="container">
@@ -3650,6 +3769,28 @@ const translations = {
       stat3: 'Jahre Unternehmererfahrung',
       stat4: 'Aktive Ventures'
     },
+    sales: {
+      eyebrow: 'Sales Excellence',
+      title: 'Zwei Dimensionen. Ein Ergebnis.',
+      subtitle: 'Als Analyst baue ich das System, als Architekt denke ich den Menschen mit. Deshalb biete ich beides: persönliches Coaching und skalierbare Vertriebsarchitektur.',
+      coaching: {
+        tag: 'Sales Coaching',
+        title: 'Mindset &amp; Accountability',
+        text: 'Persönliches Mentoring, das mentale Blockaden löst und verbindliches Handeln etabliert. Wir kommen ins Tun – mit Klarheit, Vertrauen und einer Haltung, die verkauft.',
+        bullet1: '1:1 Sparring &amp; Accountability-Rhythmus',
+        bullet2: 'Mindset-Arbeit: Einfach loslegen im Vertrieb',
+        bullet3: 'Kundenvertrauen &amp; souveräne Gesprächsführung'
+      },
+      consulting: {
+        tag: 'Sales Consulting',
+        title: 'Funnel- &amp; Prozessarchitektur',
+        text: 'Vertrieb als System gedacht: skalierbare Funnels, saubere CRM-Architektur und intelligente Automatisierung. Damit jedes Gespräch einen Platz hat – und jede Entscheidung datenbasiert fällt.',
+        bullet1: 'Funnel-Design &amp; KPI-basierte Messbarkeit',
+        bullet2: 'CRM-Setup, Lead-Routing &amp; Pipeline-Hygiene',
+        bullet3: 'Automatisierung &amp; AI-Workflows (DSGVO-konform)'
+      },
+      cta: 'Strategiegespräch vereinbaren'
+    },
     mentoring: {
       eyebrow: 'Zusammenarbeit',
       title: 'Zusammenarbeiten & Mentoring',
@@ -3856,6 +3997,28 @@ const translations = {
       stat3: 'Years of entrepreneurship',
       stat4: 'Active ventures'
     },
+    sales: {
+      eyebrow: 'Sales Excellence',
+      title: 'Two dimensions. One outcome.',
+      subtitle: 'As an analyst, I build the system; as an architect, I think about the people using it. That is why I offer both: personal coaching and scalable sales architecture.',
+      coaching: {
+        tag: 'Sales Coaching',
+        title: 'Mindset &amp; Accountability',
+        text: 'Personal mentoring that releases mental blockers and establishes committed action. We move from thinking to doing – with clarity, trust and a posture that sells.',
+        bullet1: '1:1 sparring &amp; accountability rhythm',
+        bullet2: 'Mindset work: simply getting started in sales',
+        bullet3: 'Customer trust &amp; confident conversations'
+      },
+      consulting: {
+        tag: 'Sales Consulting',
+        title: 'Funnel &amp; Process Architecture',
+        text: 'Sales designed as a system: scalable funnels, clean CRM architecture and intelligent automation. So every conversation has its place – and every decision is data-driven.',
+        bullet1: 'Funnel design &amp; KPI-based measurability',
+        bullet2: 'CRM setup, lead routing &amp; pipeline hygiene',
+        bullet3: 'Automation &amp; AI workflows (GDPR-compliant)'
+      },
+      cta: 'Book a strategy call'
+    },
     mentoring: {
       eyebrow: 'Collaboration',
       title: 'Collaborate & Mentoring',
@@ -4061,6 +4224,28 @@ const translations = {
       stat2: 'Industrias profundamente involucradas',
       stat3: 'Años de emprendimiento',
       stat4: 'Ventures activos'
+    },
+    sales: {
+      eyebrow: 'Sales Excellence',
+      title: 'Dos dimensiones. Un resultado.',
+      subtitle: 'Como analista construyo el sistema, como arquitecto pienso en las personas que lo usan. Por eso ofrezco ambas cosas: coaching personal y arquitectura de ventas escalable.',
+      coaching: {
+        tag: 'Sales Coaching',
+        title: 'Mentalidad y Accountability',
+        text: 'Mentoría personal que disuelve los bloqueos mentales y establece acción comprometida. Pasamos del pensar al hacer – con claridad, confianza y una actitud que vende.',
+        bullet1: 'Sparring 1:1 y ritmo de accountability',
+        bullet2: 'Trabajo de mindset: empezar a vender sin miedo',
+        bullet3: 'Confianza del cliente y conversaciones seguras'
+      },
+      consulting: {
+        tag: 'Sales Consulting',
+        title: 'Arquitectura de Funnels y Procesos',
+        text: 'Ventas pensadas como sistema: funnels escalables, arquitectura CRM limpia y automatización inteligente. Cada conversación tiene su lugar – y cada decisión se basa en datos.',
+        bullet1: 'Diseño de funnel y medición basada en KPIs',
+        bullet2: 'Configuración de CRM, lead routing e higiene de pipeline',
+        bullet3: 'Automatización y flujos con IA (conforme al RGPD)'
+      },
+      cta: 'Reservar llamada estratégica'
     },
     mentoring: {
       eyebrow: 'Colaboración',
